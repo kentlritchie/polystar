@@ -1,0 +1,10 @@
+# Plain pip-installable dependency list for hosts (e.g. Streamlit Community
+# Cloud) that run `pip install -r requirements.txt` against the repo root
+# and then `streamlit run app/streamlit_app.py` directly, without an
+# editable install of the polystar package itself. app/streamlit_app.py
+# adds src/ to sys.path at import time, so this alone is sufficient.
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+streamlit>=1.30

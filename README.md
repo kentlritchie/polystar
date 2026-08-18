@@ -99,6 +99,29 @@ a correctness check on the integrator itself (see the docstring in
 `he_integrator.py` for why this comparison isn't circular in the
 constant-μ case but is in the derived-μ case).
 
+## Deploying the app for free
+
+The Streamlit app is a static-data, CPU-only, single-user tool, which fits
+comfortably in [Streamlit Community Cloud](https://streamlit.io/cloud)'s
+free tier (the first-party host for Streamlit apps, no credit card):
+
+1. Sign in at [share.streamlit.io](https://share.streamlit.io) with the
+   `kentlritchie` GitHub account and authorize it to read this repo.
+2. **New app** → repository `kentlritchie/polystar`, branch `main`, main
+   file path `app/streamlit_app.py`.
+3. Under **Advanced settings**, set the Python version to 3.11. The root
+   [`requirements.txt`](requirements.txt) is picked up automatically.
+4. Deploy. It lands at a URL like `https://polystar.streamlit.app` (exact
+   subdomain depends on availability) and redeploys automatically on every
+   push to `main`.
+
+Free-tier apps sleep after a period of inactivity and take a few seconds to
+wake back up on the next visit — expected behavior, not a bug.
+
+**Alternative:** [Hugging Face Spaces](https://huggingface.co/spaces) also
+hosts Streamlit apps for free (choose the "Streamlit" SDK when creating a
+Space) if you'd rather not use Streamlit's own host.
+
 ## Project structure
 
 ```text
